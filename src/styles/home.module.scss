@@ -1,0 +1,35 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.profileImage {
+    position: absolute;
+    z-index: 1;
+    left: -30px;
+    top: -100px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+
+    h1 {
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        font-size: 38px;
+    }
+    h4 {
+        margin: 0;
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+}

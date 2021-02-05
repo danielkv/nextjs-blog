@@ -9,6 +9,8 @@ export default async function getProjects(
         "GET /users/{username}/repos",
         {
             username: "danielkv",
+            sort: "created",
+            direction: "desc",
         }
     );
 

@@ -1,0 +1,40 @@
+.container {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 7rem auto 6rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7rem;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        li {
+            margin: 0 14px;
+            a {
+                font-size: 20px;
+                color: white;
+                text-transform: uppercase;
+                padding: 8px 12px;
+                border-radius: 5px;
+                transition: background ease-in-out 0.2s;
+                &:hover {
+                    text-decoration: none;
+                    background-color: #573782;
+                }
+                &.selected {
+                    border-bottom: 4px solid white;
+                    background-color: #573782;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
