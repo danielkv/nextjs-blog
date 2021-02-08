@@ -7,6 +7,10 @@ type IProps = {
 };
 
 export default function Project({ project }: IProps) {
+    const keywords = project?.topics || [project.language];
+
+    const url = project.html_url;
+
     return (
         <article
             itemScope
@@ -16,13 +20,19 @@ export default function Project({ project }: IProps) {
             <time itemProp="dateCreated" className={portfolioStyles.date}>
                 {dayjs(project.created_at).format("MM/YYYY")}
             </time>
-            <h3 itemProp="name" className={portfolioStyles.title}>
-                {project.name}
-            </h3>
+            <a href={url} target="_blank" className={portfolioStyles.titleLink}>
+                <h3 itemProp="name" className={portfolioStyles.title}>
+                    {project.name}
+                </h3>
+            </a>
             <div itemProp="url" className={portfolioStyles.url}>
-                {project.url}
+                {url}
             </div>
-            <div itemProp="keywords" className={portfolioStyles.url}></div>
+            <div itemProp="keywords" className={portfolioStyles.topics}>
+                {keywords.map((topic) => (
+                    <div className={portfolioStyles.topic}>{topic}</div>
+                ))}
+            </div>
         </article>
     );
 }

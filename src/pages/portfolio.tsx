@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
+import PageTitle from "../components/page-title";
 import Project from "../components/project";
 import { ProjectModel } from "../models/project.model";
 import { fetcher } from "../services/fetcher";
@@ -16,6 +17,7 @@ export default function Portfolio({ projects }: IProps) {
             <Head>
                 <title>{`${siteTitle} - Portfolio`}</title>
             </Head>
+            <PageTitle>Portfolio</PageTitle>
             <section className={portfolioStyles.main}>
                 {projects.map((project) => (
                     <Project key={String(project.id)} project={project} />

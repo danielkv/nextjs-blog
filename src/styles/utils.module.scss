@@ -50,3 +50,27 @@
 .lightText {
     color: #999;
 }
+
+.pageTitleContainer {
+    .title {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .arrows {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 3rem;
+        .arrowDown {
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+            border-top: 8px solid white;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+        }
+    }
+}
